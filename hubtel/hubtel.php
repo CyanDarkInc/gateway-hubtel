@@ -257,8 +257,8 @@ class Hubtel extends NonmerchantGateway
                 $this->log($this->ifSet($_SERVER['REQUEST_URI']), serialize($request), 'output', true);
 
                 // Save the invoice token in the session
-                $this->Session->clear("hubtel_token");
-                $this->Session->write("hubtel_token", $request->token);
+                $this->Session->clear('hubtel_token');
+                $this->Session->write('hubtel_token', $request->token);
 
                 return $this->buildForm($request->response_text);
             } else {
@@ -348,7 +348,6 @@ class Hubtel extends NonmerchantGateway
                     $return_status = true;
                     break;
             }
-
         }
 
         // Log response

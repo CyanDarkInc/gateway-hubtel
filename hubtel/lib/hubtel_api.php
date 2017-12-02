@@ -81,7 +81,7 @@ class HubtelApi
 
     /**
      * Creates an invoice.
-     * 
+     *
      * @param array $items A multi-dimensional numerical array containing
      *  the invoice items with the following arguments:
      *  - name: The name of the item or product.
@@ -98,7 +98,7 @@ class HubtelApi
      * @param array $custom_data An array contaning the custom data
      * @return stdClass An object contaning the api response
      */
-    public function createInvoice($items, $description, $store, $return_url, $custom_data = null) 
+    public function createInvoice($items, $description, $store, $return_url, $custom_data = null)
     {
         // Calculate total amount of the items
         $total_amount = 0;
@@ -128,11 +128,11 @@ class HubtelApi
 
     /**
      * Gets an invoice.
-     * 
+     *
      * @param string $token The token of the invoice
      * @return stdClass An object contaning the api response
      */
-    public function getInvoice($token) 
+    public function getInvoice($token)
     {
         return $this->apiRequest('/onlinecheckout/invoice/status/' . trim($token));
     }
